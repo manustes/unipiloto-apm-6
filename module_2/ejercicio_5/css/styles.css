@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+body{
+    color: #333;
+    font-family: "Fjalla One", Arial, "Monaco", sans-serif;
+    font-size: 16px;
+}
+
+#container{
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+header{
+    background: #808080;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+#container header{
+    background: #af9f6d;
+    border-bottom: 1px solid;
+}
+
+#container header h1{
+    font-size: 4em;
+    margin: 1em;
+}
+
+#container header p{
+    font-size: 2em;
+    margin: 1em;
+}
+
+#container #content{
+    background: #dedede;
+    padding: 10px;
+}
+
+#container #content article{
+    background: #FFF1BF;
+    border-bottom: 2px solid #3117ff;
+}
+
+#container footer{
+    background: #af9f6d;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    #container header{
+      background: #27B743;
+      text-align: center;
+    }
+
+    #container footer{
+      background: #27B743;
+    }
+
+    #container #content article{
+      background: #A3FFB5;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  #container header{
+    background: #0675EB;
+    text-align: center;
+  }
+
+  #container footer{
+    background: #0675EB;
+  }
+
+  #container #content article{
+    background: #87BDF6;
+  }
+
+}
+
+@media screen and (min-width: 466px) and (max-width: 767px) {
+
+  #container header{
+    background: #F58308;
+    text-align: center;
+  }
+
+  #container footer{
+    background: #F58308;
+  }
+
+  #container #content article{
+    background: #F7C48D;
+  }
+
+}
+
+@media screen and (max-width: 465px){
+    #container header{
+        background: #dd2120;
+        border-bottom: 1px solid;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #container header h1{
+        font-size: 4em;
+        margin: 1px;
+        color: #ffa1aa;
+
+    }
+
+    #container header p{
+        font-size: 2em;
+        margin: 1em;
+    }
+
+    #container #content article{
+      background: #FFBAC5;
+    }
+
+    #container footer{
+      background: #dd2120;
+    }
+}
