@@ -1,0 +1,22 @@
+{
+  "name": "ejercicio_1",
+  "version": "1.0.0",
+  "description": "ejercicio No 1 Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manustes/unipiloto-apm-6.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "manustes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manustes/unipiloto-apm-6/issues"
+  },
+  "homepage": "https://github.com/manustes/unipiloto-apm-6#readme"
+}
