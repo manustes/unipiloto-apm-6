@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      {{title}}!
+    </h1>
+  
+    <br> <h2>id :  </h2> {{estudiante.id}}
+    <br> <h2>name :  </h2> {{estudiante.name}}
+    <br> <h2>lastname :</h2> {{estudiante.lastname}}
+    <br> <h2>age :  </h2> {{estudiante.age}}
+    <br> <h2>class :  </h2> {{estudiante.clase}}
+    <br> <h2>group :  </h2> {{estudiante.group}}
+    <br> <h2>grade :  </h2> {{estudiante.grade}}
+  
+  </div>
+
+  <div style="text-align:center">
+      <hr />
+      <label>id: </label><br />
+      <input [(ngModel)]="estudiante.id" placeholder="id"><br />
+      <label> name: </label><br />
+      <input [(ngModel)]="estudiante.name" placeholder="name"><br />
+      <label>lastname: </label><br />
+      <input [(ngModel)]="estudiante.lastname" placeholder="lastname"><br />
+      <label>age: </label><br />
+      <input [(ngModel)]="estudiante.age" placeholder="age"><br />
+      <label>group: </label><br />
+      <input [(ngModel)]="estudiante.group" placeholder="group"><br />
+    </div>
