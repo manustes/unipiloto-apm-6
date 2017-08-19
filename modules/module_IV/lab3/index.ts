@@ -55,7 +55,7 @@ class Teacher extends Person{
     profession: string;
     grades: Array< number>;
     groups: Array< string >;
-    students: Array< Student >;
+    students: Array< Student > = [];
 
     constructor( id: number, age: number, name: string, lastname: string ) {
         super(id, age, name, lastname );     
@@ -85,8 +85,8 @@ class Teacher extends Person{
         return this.profession;
     }
 
-    setStudents( students: Array< Student >): void{
-        this.students = students;
+    setStudents( students: Student): void{
+        this.students.push( students );
     }
     
     getStudents(): Array< Student >{
@@ -132,10 +132,9 @@ let groups2: Array< string > = [ "802", "904", "101"];
 teacher2.setGrades( grades1 );
 teacher2.setGroups( groups1 );
 
-let arraystudents: Array< Student > = [ alumno1, alumno2, alumno3 ];
-
-teacher1.setStudents( arraystudents );
-teacher2.setStudents( arraystudents );
+teacher1.setStudents( alumno1 );
+teacher2.setStudents( alumno2 );
+teacher2.setStudents( alumno3 );
 
 
 console.log( teacher1 );
@@ -143,10 +142,6 @@ console.log( teacher2 );
 
 console.log( alumno1 );
 
-
-for( let key in arraystudents ){
-	console.log(arraystudents[key]);
-}
 
 
 

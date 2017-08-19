@@ -41,6 +41,7 @@ var Teacher = (function (_super) {
     __extends(Teacher, _super);
     function Teacher(id, age, name, lastname) {
         _super.call(this, id, age, name, lastname);
+        this.students = [];
     }
     Teacher.prototype.setGrades = function (grades) {
         this.grades = grades;
@@ -61,7 +62,7 @@ var Teacher = (function (_super) {
         return this.profession;
     };
     Teacher.prototype.setStudents = function (students) {
-        this.students = students;
+        this.students.push(students);
     };
     Teacher.prototype.getStudents = function () {
         return this.students;
@@ -95,12 +96,9 @@ var grades2 = [8, 9, 1];
 var groups2 = ["802", "904", "101"];
 teacher2.setGrades(grades1);
 teacher2.setGroups(groups1);
-var arraystudents = [alumno1, alumno2, alumno3];
-teacher1.setStudents(arraystudents);
-teacher2.setStudents(arraystudents);
+teacher1.setStudents(alumno1);
+teacher2.setStudents(alumno2);
+teacher2.setStudents(alumno3);
 console.log(teacher1);
 console.log(teacher2);
 console.log(alumno1);
-for (var key in arraystudents) {
-    console.log(arraystudents[key]);
-}
