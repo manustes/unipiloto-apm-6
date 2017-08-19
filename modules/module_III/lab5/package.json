@@ -1,0 +1,23 @@
+{
+  "name": "lab5",
+  "version": "1.0.0",
+  "description": "Ejemplo de prueba package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manustes/unipiloto-apm-7.git"
+  },
+  "keywords": [
+    "arreglos",
+    "variables"
+  ],
+  "author": "manustes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manustes/unipiloto-apm-7/issues"
+  },
+  "homepage": "https://github.com/manustes/unipiloto-apm-7#readme"
+}
