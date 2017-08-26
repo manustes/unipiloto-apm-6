@@ -26,8 +26,8 @@ export class AppComponent {
     this.students.push(new Student(3, 13, "Sandra", "Lopez"));
 
     this.teachers.push(new Teacher(4, 35, "Javier", "Celis"));
-    this.teachers.push(new Teacher(4, 35, "Nataly", "Linero"));
-    this.teachers.push(new Teacher(4, 35, "Roberto", "Sanchez"));
+    this.teachers.push(new Teacher(5, 28, "Nataly", "Linero"));
+    this.teachers.push(new Teacher(6, 40, "Roberto", "Sanchez"));
 
   }
   

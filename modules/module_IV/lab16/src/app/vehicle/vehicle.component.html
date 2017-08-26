@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+
+<h2>Vehiculos</h2>
+<ul>
+  <li *ngFor="let vehicle of vehicles"
+      (click)="onSelectVehicle( vehicle )">
+    <span>{{vehicle.brand}}</span> {{vehicle.model}}
+    <span>{{vehicle.color}}</span>
+  </li>
+</ul>
+
+<app-vehicledetail [vehicle]="selectedVehicle"> </app-vehicledetail>

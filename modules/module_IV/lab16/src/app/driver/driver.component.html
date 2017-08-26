@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+
+<h2>Conductores</h2>
+<ul>
+  <li *ngFor="let driver of drivers"
+      (click)="onSelectDriver( driver )">
+    <span>{{driver.id}}</span> {{driver.first_name}}
+    <span>{{driver.license}}</span>
+  </li>
+</ul>
+
+<app-driverdetail [driver]="selectedDriver"> </app-driverdetail>
