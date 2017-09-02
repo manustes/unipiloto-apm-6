@@ -1,20 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
-
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 import {InMemoryWebApiModule} from "angular2-in-memory-web-api";
+import {InMemoryProductService} from "./mocks/in-memory-product.service";
 
-import { InMemoryProductService } from './mock/in-memory-product.service';
-
-import { ProductService } from './service/product.service';
 import { AppComponent } from './app.component';
-import { DetailComponent } from './detail/detail.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import {ProductsService} from "./services/products.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailComponent
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +20,7 @@ import { DetailComponent } from './detail/detail.component';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryProductService)
   ],
-  providers: [ProductService],
+  providers: [InMemoryProductService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
