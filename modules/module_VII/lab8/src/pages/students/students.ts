@@ -18,7 +18,7 @@ import { ModalStudentPage } from "../modal-student/modal-student";
 })
 export class StudentsPage {
 
-  students: Array<Student>;
+  students: Array<Student> = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public modalCtrl: ModalController) {
     this.loadStudents();
@@ -32,7 +32,9 @@ export class StudentsPage {
 
     this.storage.get('students')
       .then(result => {
-        this.students = result;
+        console.log(result);
+        if (result != null)
+          this.students = result;
       })
       .catch(error => console.error(error));
 
@@ -43,8 +45,11 @@ export class StudentsPage {
     let studentModal = this.modalCtrl.create(ModalStudentPage);
     studentModal.onDidDismiss(data => {
       console.log(data);
-      let student: Student = data;
-      this.students.push(student);
+      if (data != null) {
+        let student: Student = data['student'];
+        this.students.push(student);
+        this.storage.set('students', this.students);
+      }
     });
     studentModal.present();
   }

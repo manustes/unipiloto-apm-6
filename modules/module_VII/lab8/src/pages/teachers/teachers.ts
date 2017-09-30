@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { Teacher } from "../../models/teacher";
+import { Storage } from '@ionic/storage';
+import { ModalTeacherPage } from "../modal-teacher/modal-teacher";
 
 /**
  * Generated class for the TeachersPage page.
@@ -15,11 +18,39 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TeachersPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  teachers: Array<Teacher> = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public modalCtrl: ModalController) {
+    this.loadTeachers();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TeachersPage');
+    console.log('ionViewDidLoad StudentsPage');
+  }
+
+  loadTeachers() {
+
+    this.storage.get('teachers')
+      .then(result => {
+        if (result != null)
+          this.teachers = result;
+      })
+      .catch(error => console.error(error));
+
+  }
+
+
+  createTeacher() {
+    let studentModal = this.modalCtrl.create(ModalTeacherPage);
+    studentModal.onDidDismiss(data => {
+      console.log(data);
+      if (data != null) {
+        let teacher: Teacher = data['teacher'];
+        this.teachers.push(teacher);
+        this.storage.set('teachers', this.teachers);
+      }
+    });
+    studentModal.present();
   }
 
 }

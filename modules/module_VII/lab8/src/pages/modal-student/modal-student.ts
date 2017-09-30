@@ -26,12 +26,15 @@ export class ModalStudentPage {
     console.log('ionViewDidLoad ModalStudentPage');
   }
 
-  dismiss() {
-    this.viewCtrl.dismiss( {"student": this.myForm.value });
+  dismiss( valor: string) {
+    if(valor!=null)
+      this.viewCtrl.dismiss( {"student": this.myForm.value });
+    else
+      this.viewCtrl.dismiss();
   }
 
   saveForm(){
-    this.dismiss();
+    this.dismiss('valor');
   }
 
   private createForm() {
