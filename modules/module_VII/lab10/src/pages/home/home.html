@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="light" (click)="loadAlert('Holala')">Light</button>
+  <button ion-button (click)="loadConfirmAlert('Holala')">Default</button>
+  <button ion-button color="secondary" (click)="loadPromptAlert('Holala')">Secondary</button>
+
+  <button ion-button (click)="obtenerPosicion()">Obtener Posición</button>
+</ion-content>
